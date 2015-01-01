@@ -349,7 +349,7 @@ while running:
         for event in pygame.event.get():
             
 
-            if event.type == USEREVENT +1 and menu == 1:
+            if event.type == USEREVENT +1:
                 minutes += 1
             
             if event.type == pygame.QUIT:
