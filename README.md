@@ -14,6 +14,7 @@ See the [Installation guide](https://github.com/5Volt-Junkie/RPi-Tron-Radio/blob
 * Displays time and date
 * Displays IP address
 * Displays CPU temp
+* Screensaver (screen burn prevention)
  
 
 * Buttons:
