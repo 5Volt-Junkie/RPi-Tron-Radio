@@ -75,4 +75,8 @@ Insert the following command, just above exit0
 ```
 Save the file
 
+```
+sudo reboot
+```
+
 
