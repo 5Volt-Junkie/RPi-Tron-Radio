@@ -79,4 +79,43 @@ Save the file
 sudo reboot
 ```
 
+## Install the "Favorite" function 
+At the moment, I'm writing this guide and the new script will be updated next days, after I've modified all skins, docu and the main code. Be patient ;)
 
+### Install appache and php
+```
+sudo apt-get update
+sudo apt-get install apache2 php5 libapache2-mod-php5
+```
+
+Then enter the IP-address of your radio in the address field of your webbrowser.
+You can find the IP-address on the second menu screen.
+If the site shows "It works!", than it really worsk ;)
+
+### Add favorite list to /var/www/
+
+```
+cd /var/www/
+sudo touch favorite.txt
+```
+
+### Create simple webfront
+
+```
+cd /var/www/
+sudo nano index.html
+```
+
+Now insert this simple html code and save the file
+```
+<html>
+<head><title>Tron Radio</title></head>
+<body>
+<h1>Raspberry Pi Tron Radio</h>
+<p><a href="favorite.txt">Show my favorites</a></p>
+
+</body>
+</html>
+```
+
+```sudo reboot```
