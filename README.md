@@ -1,5 +1,7 @@
 RPi-Tron-Radio
 ==============
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?\user_id=5Volt-Junkie&url=https://github.com/5Volt-Junkie/RPi-Tron-Radio&title=RPi-Tron-Radio&\description=Raspberry_Pi_Internet_Radio&language=&\tags=github&category=software)
+
 ![Player](https://raw.githubusercontent.com/5Volt-Junkie/RPi-Tron-Radio/master/docu/RPi-Internet-Radio.png)
 
 Small web radio with Raspberry Pi and 2.8" 320x240 TFT Touchscreen. The interface of the web radio was written in python/pygame.
