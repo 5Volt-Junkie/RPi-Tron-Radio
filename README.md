@@ -11,6 +11,8 @@ Watch demo video on YouTube.com: https://www.youtube.com/watch?v=QzvNIHI-k-4
 See the [Installation guide](https://github.com/5Volt-Junkie/RPi-Tron-Radio/blob/master/docu/Installation.md)
 
 
+Important: I'm testing it with soma.fm only. I don't know how good it works with another stations.
+
 ## Features
 * RPi-Tron-Radio runs through mpd and mpc.
 * 8 skin colors
@@ -21,6 +23,7 @@ See the [Installation guide](https://github.com/5Volt-Junkie/RPi-Tron-Radio/blob
 * Displays IP address
 * Displays CPU temp
 * Screensaver (screen burn prevention)
+* Can write the title of the current song to the text file.
  
 
 * Buttons:
@@ -34,16 +37,15 @@ Menu 1
   * Previous
   * -> Menu 2
 
-  * empty button (reserved for additional function)
-  * switch skin color
-  * run stream in background
-  * close/stop radio
-  * poweroff
-  * reboot
-  * refresh (probably useless)
+  * Fav
+  * Switch skin color
+  * Run stream in background
+  * Close/stop radio
+  * Poweroff
+  * Reboot
+  * Reserved for on/off RGB-LED
   * -> Menu 1
 
-  
 
 
 
