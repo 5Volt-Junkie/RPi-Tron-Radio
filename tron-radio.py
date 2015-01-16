@@ -71,6 +71,40 @@ screen.blit(skin, (0, 0))
 #initial volume settings
 subprocess.call('mpc volume 100' , shell=True)
 
+reboot_label = font.render("rebooting...", 1, (font_color))
+poweroff_label = font.render("shutting down", 1, (font_color))
+
+
+song_title = " "
+playlist = " "
+
+def reboot():
+    screen.fill(black)
+    screen.blit(reboot_label, (10, 100))
+    pygame.display.flip()
+    time.sleep(5)
+    GPIO.cleanup()
+    subprocess.call('mpc stop' , shell=True)
+    subprocess.call('reboot' , shell=True)
+
+
+
+def poweroff():
+    screen.fill(black)
+    screen.blit(poweroff_label, (10, 100))
+    pygame.display.flip()
+    time.sleep(5)
+    GPIO.cleanup()
+    subprocess.call('mpc stop' , shell=True)
+    subprocess.call('poweroff' , shell=True)
+
+#copy playing title to favorite.txt    
+def favorite():
+    print song_title
+    
+    f = open ('/var/www/favorite.txt' , 'a')
+    f.write('-' + song_title + '\n')
+    f.close()
 
 
 #function runs if touchscreen was touched (and screensaver is disabled)
@@ -151,7 +185,8 @@ def button(number):
 
         if menu == 2:
             if number == 1:
-                print "to be defined"
+                favorite()
+                
 
             if number == 2:
                 #print "switch skin"
@@ -171,19 +206,16 @@ def button(number):
             if number == 4:
                 #print "quit radio"
                 subprocess.call('mpc stop', shell=True)
-                
                 pygame.quit()
                 sys.exit()
 
             if number == 5:
-                #print "power off"
-                subprocess.call('mpc stop' , shell=True)
-                subprocess.call('sudo poweroff', shell=True)
+                print "power off"
+                poweroff()
 
             if number == 6:
-                #print "reboot"
-                subprocess.call('mpc stop' , shell=True)
-                subprocess.call('sudo reboot', shell=True)
+                print "reboot"
+                reboot()
 
             if number == 7:
                 #print "update screen"
@@ -277,7 +309,11 @@ def update_screen():
             else:
                 line1 = lines[0]
                 line2 = lines[1]
+                global song_title
+                song_title = line1
                 line1 = line1[:30]
+                
+                
                 
                 title_label = font.render(line1 + '.', 1, (font_color))
                 
@@ -349,7 +385,7 @@ while running:
         for event in pygame.event.get():
             
 
-            if event.type == USEREVENT +1:
+            if event.type == USEREVENT +1 and menu == 1:
                 minutes += 1
             
             if event.type == pygame.QUIT:
