@@ -7,7 +7,7 @@ To run the web radio, mpc, mpd and FBTFT are required.
 
 
 
-work in progress!!!
+
 
 #Installation
 
@@ -28,13 +28,7 @@ sudo raspi-config
 ```
 * Expand filesystem, language, keyboard layout and time zone
 * Reboot your Raspberry
-* After reboot:
-```
-sudo apt-get update
-sudo apt-get upgrade
-sudo rpi-update
-sudo reboot
-```
+
 ### Touchscreen calibration
 * After reboot:
 ```
