@@ -12,6 +12,8 @@ To run the web radio, mpc, mpd and FBTFT are required.
 ## Prepare SD-Card
 Download the newest Raspbian Image with preinstalled FBTFT (8Bit Version) https://github.com/watterott/RPi-Display
 
+You can also install the frame buffer on existing raspbian https://github.com/watterott/RPi-Display/blob/master/docu/FBTFT-Install.md
+
 Copy the Image to SD-Card with dd or Win32DiskImager.
 Turn on your Raspberry and connect it to the internet
 
