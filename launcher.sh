@@ -1,5 +1,5 @@
 #!/bin/sh
 #launcher.sh
 
-cd /home/pi/tron-radio
+cd /home/pi/RPi-Tron-Radio
 sudo python tron-radio.py
