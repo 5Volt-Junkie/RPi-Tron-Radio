@@ -1,3 +1,16 @@
+"""
+RPi-Tron-Radio
+Raspberry Pi Web-Radio with 2.8" TFT Touchscreen and Tron-styled graphical interface
+
+GitHub: http://github.com/5volt-junkie/RPi-Tron-Radio
+Blog: http://5volt-junkie.net
+
+
+MIT License: see license.txt
+
+
+"""
+
 import pygame
 from pygame.locals import *
 import time
@@ -6,16 +19,10 @@ import sys
 import os
 import glob
 import subprocess
-import RPi.GPIO as GPIO
 
 os.environ["SDL_FBDEV"] = "/dev/fb1"
 os.environ["SDL_MOUSEDEV"] = "/dev/input/touchscreen"
 os.environ["SDL_MOUSEDRV"] = "TSLIB"
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(18, GPIO.OUT)
-GPIO.output(18, GPIO.HIGH)
-
 
 
 #colors     R    G    B
@@ -30,14 +37,11 @@ yellow  = (255, 255,   0)
 orange  = (255, 127,   0)
 
 
-
 #screen size
 width  = 320
 height = 240
 size = (width, height)
 screen = pygame.display.set_mode(size)
-
-
 
 
 pygame.init()
@@ -83,7 +87,6 @@ def reboot():
     screen.blit(reboot_label, (10, 100))
     pygame.display.flip()
     time.sleep(5)
-    GPIO.cleanup()
     subprocess.call('mpc stop' , shell=True)
     subprocess.call('reboot' , shell=True)
 
@@ -94,7 +97,6 @@ def poweroff():
     screen.blit(poweroff_label, (10, 100))
     pygame.display.flip()
     time.sleep(5)
-    GPIO.cleanup()
     subprocess.call('mpc stop' , shell=True)
     subprocess.call('poweroff' , shell=True)
 
@@ -385,21 +387,17 @@ while running:
         for event in pygame.event.get():
             
 
-            if event.type == USEREVENT +1 and menu == 1:
+            if event.type == USEREVENT +1:
                 minutes += 1
             
             if event.type == pygame.QUIT:
-                #GPIO.cleanup()
                 print "Quit radio"
-		GPIO.cleanup()
                 pygame.quit()
                 sys.exit()
 
             if event.type == pygame.KEYDOWN:
                 if event.key == K_ESCAPE:
-                    #GPIO.cleanup()
                     print "Quit radio"
-		    GPIO.cleanup()
                     pygame.quit()
                     sys.exit()
 
@@ -409,7 +407,7 @@ while running:
             if event.type == pygame.MOUSEBUTTONDOWN and screensaver == True:
 
                 minutes = 0
-		GPIO.output(18, GPIO.HIGH)
+		subprocess.call('echo 0 | sudo tee /sys/class/backlight/*/bl_power' , shell=True)
                 screensaver = False
                 update_screen()
                 break
@@ -428,25 +426,7 @@ while running:
         #enable screensaver on timer overflow
         if minutes > screensaver_timer:
             screensaver = True
-	    GPIO.output(18, GPIO.LOW)	
+	    subprocess.call('echo 1 | sudo tee /sys/class/backlight/*/bl_power' , shell=True)	
             update_screen()
         update_screen()
         time.sleep(0.1)
-        
-        
-
-                
-
-            
-
-                
-
-        
-            
-
-
-
-
-
-
-        
