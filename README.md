@@ -11,7 +11,7 @@ Watch demo video on YouTube.com: https://www.youtube.com/watch?v=QzvNIHI-k-4
 See the [Installation guide](https://github.com/5Volt-Junkie/RPi-Tron-Radio/blob/master/docu/Installation.md)
 
 
-Important: I'm testing it with soma.fm only. I don't know how good it works with another stations.
+Important: I'm testing it with [soma.fm streams] (http://somafm.com/) only. I don't know how good it works with another stations.
 
 ## Features
 * RPi-Tron-Radio runs through mpd and mpc.
