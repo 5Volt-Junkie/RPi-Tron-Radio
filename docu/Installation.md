@@ -33,7 +33,7 @@ sudo raspi-config
 
 #### Run the installation script
 ```
-sudo /bin/bash/ rpi-display.sh 270
+sudo /bin/bash rpi-display.sh 270
 ```
 reboot your Raspberry Pi
 
