@@ -45,6 +45,7 @@ sudo TSLIB_FBDEVICE=/dev/fb1 TSLIB_TSDEVICE=/dev/input/touchscreen ts_calibrate
 
 #### Install mpc & mpd...
 ```
+sudo apt-get update
 sudo apt-get install mpc mpd apache2 php5 libapache2-mod-php5
 ```
 
