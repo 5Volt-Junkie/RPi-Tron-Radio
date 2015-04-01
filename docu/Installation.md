@@ -19,6 +19,8 @@ Turn on your Raspberry and connect it to the internet
 
 #### First Boot
 
+(Tip: you can also use SSH on port 22)
+
 * Login with 
 User: pi
 Password: raspberry
