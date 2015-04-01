@@ -9,7 +9,7 @@ To run the web radio, mpc, mpd and FBTFT are required.
 
 #Installation
 
-## Prepare SD-Card
+#### Prepare SD-Card
 Download the newest Raspbian Image with preinstalled FBTFT (8Bit Version) https://github.com/watterott/RPi-Display
 
 You can also install the frame buffer on existing raspbian https://github.com/watterott/RPi-Display/blob/master/docu/FBTFT-Install.md
@@ -37,7 +37,7 @@ sudo /bin/bash rpi-display.sh 270
 ```
 reboot your Raspberry Pi
 
-### Touchscreen calibration
+#### Touchscreen calibration
 ```
 sudo TSLIB_FBDEVICE=/dev/fb1 TSLIB_TSDEVICE=/dev/input/touchscreen ts_calibrate
 ```
@@ -68,7 +68,7 @@ insert this line, just above the "exit0"
 Close the file with Ctrl+X nad confirm with y
 
 
-## Prepare simple webfront and favorite.txt file for saving the name of the current playing song
+#### Prepare simple webfront and favorite.txt file for saving the name of the current playing song
 ```
 sudo touch /var/www/favorite.txt
 sudo nano /var/www/index.html
@@ -88,7 +88,7 @@ Close the file with Ctrl+X and confirm with y
 
 
 
-### Add stream/file to playlist
+#### Add stream/file to playlist
 ```
 sudo mpc add <file or URL>
 ```
