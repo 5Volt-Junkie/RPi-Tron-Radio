@@ -68,7 +68,7 @@ insert this line, just above the "exit0"
 Close the file with Ctrl+X nad confirm with y
 
 
-#### Prepare simple webfront and favorite.txt file for saving the name of the current playing song
+#### Prepare simple webfront and favorite.txt file for saving the name of playing song
 ```
 sudo touch /var/www/favorite.txt
 sudo nano /var/www/index.html
