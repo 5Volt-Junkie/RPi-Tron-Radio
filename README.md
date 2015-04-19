@@ -10,6 +10,9 @@ Watch demo video on YouTube.com: https://www.youtube.com/watch?v=QzvNIHI-k-4
 
 See the [Installation guide](https://github.com/5Volt-Junkie/RPi-Tron-Radio/blob/master/docu/Installation.md)
 
+Also, you can visit the German Raspberry Pi Forum, where some guys made a bunch of fancy improvements.
+[http://www.forum-raspberrypi.de/Thread-rpi-tron-radio-raspberry-pi-webradio-im-tronstyle](http://www.forum-raspberrypi.de/Thread-rpi-tron-radio-raspberry-pi-webradio-im-tronstyle)
+
 
 Important: I'm testing it with [soma.fm streams] (http://somafm.com/) only. I don't know how good it works with another stations.
 
