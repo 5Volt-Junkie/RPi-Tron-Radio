@@ -65,7 +65,7 @@ sudo nano /etc/rc.local
 
 insert this line, just above the "exit0"
 ```
-(home/pi/RPi-Tron-Radio/launcher.sh)&
+home/pi/RPi-Tron-Radio/launcher.sh &
 ```
 Close the file with Ctrl+X nad confirm with y
 
